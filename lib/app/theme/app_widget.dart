@@ -6,6 +6,7 @@ import 'app_colors.dart';
 abstract class AppWidget {
   static Widget getAppBar(String title) {
     return AppBar(
+      automaticallyImplyLeading: true,
       leading: IconButton(
         icon: Icon(Icons.arrow_back_ios, color: Colors.white),
         onPressed: () {
@@ -17,4 +18,7 @@ abstract class AppWidget {
       centerTitle: true,
     );
   }
+
 }
+
+

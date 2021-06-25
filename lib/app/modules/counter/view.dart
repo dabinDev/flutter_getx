@@ -20,7 +20,7 @@ class _counterPageState extends State<counterPage> {
     return Scaffold(
       appBar: AppWidget.getAppBar("计数器"),
       body: Obx(() {
-        return Text("您已经点击了${state.count}", style: cardTextStyle,);
+        return Text("${state.name}您已经点击了${state.count}", style: cardTextStyle,);
       }),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.camera),

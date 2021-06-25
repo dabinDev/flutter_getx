@@ -17,15 +17,19 @@ class _loginPageState extends State<loginPage> {
 
   @override
   Widget build(BuildContext context) {
+    var params = Get.arguments ?? "";
     return Scaffold(
       appBar: AppWidget.getAppBar("登录"),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Get.toNamed(Routes.counter);
+          Get.back(result: "我是带参返回");
         },
         child: Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      body: Container(
+        child: Text("${params.toString()}"),
+      ),
       bottomNavigationBar: BottomAppBar(
         shape: CircularNotchedRectangle(),
         child: Row(
